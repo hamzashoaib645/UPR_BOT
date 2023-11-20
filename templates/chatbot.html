@@ -1,0 +1,87 @@
+{% extends 'index2.html' %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .chat-container {
+            max-width: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .user-message {
+            background-color: #007bff;
+            color: #fff;
+            text-align: right;
+        }
+        .bot-message {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        #chat-log {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        #user-input {
+            width: 80%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #send-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-log"></div>
+        {% if user_message %}
+        <div class="user-message message">
+            <strong>You:</strong>{{ user_message }} <span id="user-message"></span>
+        </div>
+        {% endif %}
+    {% if bot_response %}
+        <div class="bot-message message">
+            <strong>UPR_BOT:</strong>{{ bot_response }} <span id="bot-message"></span>
+        </div>
+    {% endif %}
+    
+    <div class="center" >
+        <form class="col-6"  method="post" id="user-input-form" style="width:100%; display:flex;">
+          {% csrf_token %}
+          <div class="inputbox" style="height: 0px; width: 70%;">
+            <input type="text" name="user_message">
+            <span>Ask a question. . .</span>
+          </div>
+          <div class="inputbox" style="height: 0px; width: 30%; padding-left:10px; margin-top:3.5px;">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+        // JavaScript code remains the same as provided in the previous HTML example
+    </script>
+</body>
+{% endblock %}

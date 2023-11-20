@@ -1,0 +1,191 @@
+#loader-back{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100000;
+}
+.loader{
+width: 130px;
+height: 130px;
+margin: 50px auto 0;
+position: fixed;
+left: 47%;
+top: 30%;
+}
+.loader span{
+width: 100%;
+height: 100%;
+transform: rotate(calc(20deg * var(--i)));
+position: absolute;
+top: 0;
+left: 0;
+}
+.loader span:before{
+content: '';
+background: #011577;
+width: 8px;
+height: 18px;
+border-radius: 60%;
+position: absolute;
+top: 0;
+left: 0;
+animation: animate 1s linear infinite;
+animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animateBg{
+0%{ filter: hue-rotate(0deg); }
+100%{ filter: hue-rotate(360deg); }
+}
+@keyframes animate{
+0%{ transform: scale(1); }
+80%, 100%{ transform: scale(0); }
+}
+.bouncing-text {
+    position: relative;
+    display: flex;
+    font-size: 70px;
+    font-weight: 900;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif; 
+  }
+  
+  .b, .o, .u, .n, .c, .e {
+    position: relative !important;
+    color: #4cc9f0;
+    text-shadow: 0 3px #4361ee, 0 5px #4361ee, 0 7px #4361ee;
+  }
+  
+  .b {
+    animation: bounce 1s ease infinite;
+    -webkit-animation: bounce 1s ease infinite;
+  }
+  
+  .o {
+    animation: bounce 1s ease infinite .1s;
+    -webkit-animation: bounce 1s ease infinite .1s;
+  }
+  
+  .u {
+    animation: bounce 1s ease infinite .2s;
+    -webkit-animation: bounce 1s ease infinite .2s;
+  }
+  
+  .n {
+    animation: bounce 1s ease infinite .3s;
+    -webkit-animation: bounce 1s ease infinite .3s;
+  }
+  
+  .c {
+    animation: bounce 1s ease infinite .4s;
+    -webkit-animation: bounce 1s ease infinite .4s;
+  }
+  
+  .e {
+    animation: bounce 1s ease infinite .5s;
+   -webkit-animation: bounce 1s ease infinite .5s;
+  }
+  
+   @keyframes bounce {
+          0%   { transform: scale(1,1) translateY(0); }
+          10%  { transform: scale(1.1,.9) translateY(0); }
+          30%  { transform: scale(.9,1.1)   translateY(-55px);}
+          50%  { transform: scale(1.05,.95) translateY(0); }
+          58%  { transform: scale(1,1) translateY(-7px); }
+          65%  { transform: scale(1,1) translateY(0);}
+          100% { transform: scale(1,1) translateY(0);}
+      }
+  
+  @-webkit-keyframes bounce {
+         0%   { transform: scale(1,1) translateY(0); }
+          10%  { transform: scale(1.1,.9) translateY(0); }
+          30%  { transform: scale(.9,1.1)   translateY(-55px);}
+          50%  { transform: scale(1.05,.95) translateY(0); }
+          58%  { transform: scale(1,1) translateY(-7px);}
+          65%  { transform: scale(1,1) translateY(0);}
+          100% { transform: scale(1,1) translateY(0);} 
+  }
+  
+  
+  .bouncing-text:before, .bouncing-text:after {
+    content:"";
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    width: 50px;
+    height:5px;
+    border-radius:50%;
+    top:82px;
+    z-index:-1;
+  }
+  
+  .shadow, .shadow-two {
+    position: absolute;
+    top:82px;
+    z-index:-1;
+  }
+  
+  .shadow:before, .shadow:after, .shadow-two:before, .shadow-two:after {
+    content:"";
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    width: 50px;
+    height:5px;
+    border-radius:50%;
+    top:0;  
+  }
+  
+  .bouncing-text:before {
+    left:0;
+    animation: scale 1s linear infinite;
+    -webkit-animation: scale 1s linear infinite;
+  }
+  
+  @keyframes scale {
+    0% {transform: scaleX(1);}
+    25% {transform: scaleX(0.4);}
+    50% {transform: scaleX(1);}
+    75% {transform: scaleX(0.9);}
+    100% {transform: scaleX(1);}
+  }
+  
+  @-webkit-keyframes scale {
+     0% {transform: scaleX(1);}
+    25% {transform: scaleX(0.4);}
+    50% {transform: scaleX(1);}
+    75% {transform: scaleX(0.9);}
+    100% {transform: scaleX(1);}
+  }
+  
+  .bouncing-text:after {
+    left: 57px;
+    animation: scale 1s linear infinite .1s;
+    -webkit-animation: scale 1s linear infinite .1s;
+  }
+  
+  .shadow:before {
+    left: 116px;
+    animation: scale 1s linear infinite .2s;
+    -webkit-animation: scale 1s linear infinite .2s;
+  }
+  
+  .shadow:after {
+    left:175px;
+    animation: scale 1s linear infinite .3s;
+    -webkit-animation: scale 1s linear infinite .3s;
+  }
+  
+  .shadow-two:before {
+    left:232px;
+    animation: scale 1s linear infinite .4s;
+    -webkit-animation: scale 1s linear infinite .4s;
+  }
+  
+  .shadow-two:after {
+    left: 285px;
+    animation: scale 1s linear infinite .5s;
+    -webkit-animation: scale 1s linear infinite .5s;
+  }
+
+  .loading-text{
+    margin-top: 50px;
+    margin-left: -100px;
+  }

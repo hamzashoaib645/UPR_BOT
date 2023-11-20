@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="center" >
+  <h1>Bot Response Form</h1><br>
+  {% include 'includes/messages.html' %}
+  <form class="pt-5 col-6"  method="post" action="{% url 'add_bot_responses' %}" style="width:70%;">
+    {% csrf_token %}
+    <div class="inputbox">
+      <input type="text" name="tags" required="required">
+      <span>Tag</span>
+    </div>
+    <div class="inputbox">
+      <textarea name="user-query" rows="4" required></textarea>
+      <span>User Query</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" name="bot-response" required="required">
+      <span>Bot Response</span>
+    </div>
+    <div class="inputbox">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

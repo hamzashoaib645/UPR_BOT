@@ -1,0 +1,32 @@
+{% extends 'index2.html' %}
+
+{% block content %}
+
+<div class="col-lg-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h2>Admin Response Table</h2>
+                    <div class="table-wrapper">
+                      <table class="fl-table">
+                        <thead>
+                          <tr>
+                            <th>Question</th>
+                            <th>UPR-BOT Answer</th>
+                            <th>Admin Responses</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in his %}                      
+                          <tr>
+                            <td>{{i.questions}}</td>
+                            <td>{{i.responses}}</td>
+                            <td>{{i.reply}}</td>
+                          </tr>
+                          {% endfor %}
+                        <tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+{% endblock %}

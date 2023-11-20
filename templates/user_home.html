@@ -1,0 +1,286 @@
+{% extends 'index2.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .text {
+    width: 100%;
+    background-color: #f4f4f4; /* Background color for the text */
+    padding: 20px;
+  }
+
+  .text p {
+    color: #333;
+      font-weight: bold;/* Text color */
+  }
+
+  .logo {
+    width: 30%;
+
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  .slider-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  #lottie-container {
+    width: 530px; 
+  }
+  .dashboard-header{
+    display: flex;
+  }
+  .header-one{
+    width: 60%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-two{
+    width: 40%;
+  }
+  i.mdi.icofont-ambulance-cross::before {
+    content: "\f068";
+}
+i.mdi.icofont-medical-sign-alt.research::before {
+  content: "\f109";
+}
+i.mdi.icofont-stethoscope.global::before {
+  content: "\f133";
+}
+</style>
+<div class="dashboard-header">
+  <div class="header-one">
+    <div class="col-lg-12">
+      <h6>UPR-BOT</h6>
+      <h2>Welcome to the University of Poonch Rawalakot</h2>
+      <p><b>Dear User,</b>
+      <br> Welcome to the UPR-BOT! <br>Step into the future of education with University of Poonch Rawalakot Chatbot, your dynamic virtual companion. Seamlessly blending innovation and assistance, our chatbot opens the gateway to a personalized journey through the university's offerings. Whether you're seeking information, exploring campus life, or connecting with our vibrant community, our chatbot is your instant guide to the vast realm of possibilities at University of Poonch Rawalakot. Engage, explore, and embark on a transformative learning experience — the future of education begins with a conversation.</p>
+    </div>
+  </div>
+  <div class="header-two">
+    <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+      <div id="lottie-container" style="width: 530px; padding: 100px;"></div>
+    </div>
+  </div>
+
+</div>
+    <div class="slider-container">
+    <div class="slider">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/slider/1686845790IMG-20230615-WA0016.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slider/1687343456IMG-20230621-WA0016.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slider/1687765788IMG-20230626-WA0011.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/slider/1688984912IMG-20230710-WA0025.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/slider/1689856368WhatsApp Image 2023-07-20 at 5.16.25 AM.jpeg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/slider/1692785334IMG-20230823-WA0013.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/slider/1695720827IMG-20230926-WA0060.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/slider/1695720853IMG-20230926-WA0061.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/slider/14906741424777.jpg' %}" class="d-block w-100" alt="Slider Image">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+    </div>
+
+    <section class="Feautes section">
+			<div class="container" style="flex-direction:column; text-align:center;">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2 style="margin: 30px; font-weight: 800;">We Are Always Ready to Communicate with You</h2>
+							<img src="{% static 'images/logo.png' %}" style="width:100px;" alt="#">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="mdi icofont-ambulance-cross course"></i>
+							</div>
+							<h3>Cutting-Edge Programs</h3>
+							<p>Transformative education with expert-led programs for success.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="mdi icofont-medical-sign-alt research"></i>
+							</div>
+							<h3>Research Excellence</h3>
+							<p>Join us in groundbreaking research for academic innovation.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="mdi icofont-stethoscope global"></i>
+							</div>
+							<h3>Global Perspectives</h3>
+							<p>Embrace diversity, global programs, and a multicultural environment.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+    <!-- Start Contact Us -->
+		<section class="contact-us section">
+			<div class="container">
+				<div class="inner">
+					<div class="row"> 
+						<div class="col-lg-6">
+							<div class="contact-us-left">
+								<!--Start Google-map -->
+								<div id="myMap">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.680355437351!2d73.77192127579404!3d33.846353028573596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e06bc100eec5a5%3A0x598138442c799865!2sUniversity%20of%20Poonch%20Rawalakot!5e0!3m2!1sen!2s!4v1696002355877!5m2!1sen!2s" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+								<!--/End Google-map -->
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="contact-us-form">
+								<h2>Contact With Us</h2>
+								<p>If you have any questions please fell free to contact with us.</p>
+								<!-- Form -->
+								<form class="form" method="post" action="mail/mail.php">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="name" placeholder="Name" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="email" name="email" placeholder="Email" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="phone" placeholder="Phone" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="subject" placeholder="Subject" required="">
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<textarea name="message" placeholder="Your Message" required=""></textarea>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group login-btn">
+												<button class="btn" type="submit">Send</button>
+											</div>
+											<div class="checkbox">
+												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Do you want to subscribe our Newsletter ?</label>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!--/ End Form -->
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+<!--div class="container">
+  <div class="text">
+    <p>
+        The University of Poonch Rawalakot is located in the heart of district Poonch, Rawalakot, Azad Jammu and Kashmir. The valley of Rawalakot exhibits the fabulous beauty of breathtaking scenes in the foothills of lower Himalayas. The snowy tops of the mountains embracing the clouds and lush green valleys offer the scenes of heaven on earth. The pleasant weather in summer makes the "University of Poonch" the most beautiful venue for academic and research activities. The University of Poonch was established as an institute in 1980 at Rawalakot, to expand the horizon of Agricultural Technology and to give productive incentives for agricultural development in the area. It was upgraded to a university in February 2012. In achieving this benchmark of a fully autonomous university, it has encountered many barriers and now it comprises seven faculties. The university faculty consists of more than 82 highly qualified and distinguished teachers; many of them have obtained higher degrees from renowned international organizations and institutions. Higher education is an essential component, imparting high-quality education for the progress of a society and extends this component to the individuals by providing accessible opportunities resulting in research and knowledge production, and also helpful for achieving the highest potential in life. The advancement in Information Technology gives a cutting edge to the vision of University of Poonch, and our ultimate focus rests on achieving excellence in a host of contemporary and emerging fields of Information Technology.
+          The University of Poonch, only after 2 years of its establishment and having started 6 faculties with more than 30 programs, launched the "Institute of Earth Sciences" in a new campus at Mong, named after its great heroes, Sardar Sabaz Ali Khan and Sardar Malli Khan, who made history by setting glorious and memorable examples of sacrifice for freedom. The President of the State of Jammu and Kashmir and the Chancellor of the university of Poonch, Sardar Muhammad Yaqoob Khan, inaugurated the Institute of Earth Sciences at SM Campus, Mong on March 28, 2014. At the initial stages, only one program of Geology with BS (4 year) has been launched where classes are expected to commence from September 2014 and subsequently M. Phil and Ph. D. programs will be introduced. The campus will be further strengthened by the addition of new programs such as Geophysics, Hydrology, Meteorology, Physical Geography, Soil Sciences, Environmental Sciences to make it stand out in the world of education.</p>
+  </div>
+<div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" />
+    </div>
+</div-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+
+<script>
+
+  const animationData = "{% static 'js/animation1.json' %}";
+  // Replace 'lottie-container' with the ID of your container element
+  const container = document.getElementById('lottie-container');
+
+  const anim = lottie.loadAnimation({
+    container: container,
+    renderer: 'svg', // 'svg' or 'canvas'
+    loop: true,
+    autoplay: true,
+    path: animationData,
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('#carouselExampleFade').carousel({
+      interval: 5000 // Change slide every 5 seconds (5000 milliseconds)
+    });
+  });
+</script>
+
+{% endblock %}

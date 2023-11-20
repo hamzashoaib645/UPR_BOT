@@ -1,0 +1,40 @@
+{% load static %}
+<nav class="sidebar sidebar-offcanvas" id="Admin-sidebar" style="background:white;">
+        <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Admin_home' %}">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">User Management</li>
+            <li class="nav-item">
+  <a class="nav-link" href="{% url 'view_user' %}">
+    <i class="menu-icon mdi mdi-account-circle-outline"></i>
+    <span class="menu-title">View Users</span>
+  </a>
+</li>
+            <li class="nav-item nav-category">UPR-BOT Responses Management</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="menu-icon mdi mdi-file-account"></i>
+              <span class="menu-title">UPR-BOT Responses</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'bot_responses' %}"> Add Responses </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{% url 'train_model' %}"> Train UPR-BOT </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category">UPR-BOT History</li>
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'admin_view_history' %}">
+    <i class="menu-icon mdi mdi-file-account"></i>
+    <span class="menu-title">View History</span>
+  </a>
+</li>
+    </ul>
+      </nav>

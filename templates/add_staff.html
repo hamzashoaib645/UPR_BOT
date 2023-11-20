@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="center" >
+  <h1>Staff Registration Form</h1><br>
+  {% include 'includes/messages.html' %}
+  <form class="pt-5 col-6"  method="post" action="{% url 'add_staff' %}" style="width:70%;">
+    {% csrf_token %}
+    <div class="inputbox">
+      <input type="text" name="name" required="required">
+      <span>Enter Name</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" name="faculty" required="required">
+      <span>Faculty</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" name="department" required="required">
+      <span>Department</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" name="designation" required="required">
+      <span>Designation</span>
+    </div>
+    <div class="inputbox">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="col-lg-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h2>Date Sheet</h2>
+                    <div class="table-wrapper">
+                      <table class="fl-table">
+                        <thead>
+                          <tr>
+                            <th>Semester</th>
+                            <th>Date</th>
+                            <th>Course Name</th>
+                            <th>Time</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in date %}                      
+                          <tr>
+                            <td> {{i.semester}}</td>
+                            <td>{{i.exam_date}}</td>
+                            <td>{{i.exam_subject}}</td>
+                            <td>{{i.time}}</td>
+                            <td class="delete">
+                              <a href="{% url 'delete_datesheet' user.id %}" class="btn btn-sm bg-danger-light">
+                                <i class="mdi mdi-trash-can-large trash-can trash">Delete</i>
+                              </a>
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        <tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+{% endblock %}

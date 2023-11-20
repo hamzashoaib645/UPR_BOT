@@ -1,0 +1,27 @@
+{% load static %}
+<nav class="sidebar sidebar-offcanvas" id="User-sidebar" style="background:white;">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_home' %}">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">Chat with UPR-BOT</li>
+          <li class="nav-item">
+            <a class="nav-link"  href="{% url 'index' %}">
+              <i class="menu-icon mdi mdi-account-circle-outline"></i>
+              <span class="menu-title">UPR-BOT</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">UPR-BOT History</li>
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'view_history' %}">
+    <i class="menu-icon mdi mdi-file-account"></i>
+    <span class="menu-title">View History</span>
+  </a>
+</li>
+
+
+        </ul>
+      </nav>
